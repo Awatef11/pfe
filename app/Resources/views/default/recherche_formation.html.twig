@@ -1,0 +1,31 @@
+{#<html>
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<head>
+
+    <title>Rechercher</title>
+    <link href="css/style2.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>#}
+
+<form action="{{ path('gestion_recherche') }}" method="post">
+    <table width=50% align=center>
+        <tr>
+            <td align=rigth><input class='text' type="text" name="recherche" size=50 maxlength=50></td>
+            <td align=left><input class="bouton" type="submit"></td>
+        </tr>
+    </table>
+  {#  <table width=25% align=center>
+        <tr>
+            <td><input type="button" name="choix" value="matricule">Matricule</td>
+    </table>#}
+</form>
+{#
+
+</body>
+
+</html>
+{% endblock %}#}

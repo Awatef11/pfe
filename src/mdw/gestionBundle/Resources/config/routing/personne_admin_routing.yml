@@ -1,0 +1,24 @@
+admin_personne_index:
+    path:     /
+    defaults: { _controller: "gestionBundle:Personne_admin:index" }
+    methods:  GET
+
+admin_personne_show:
+    path:     /{id}/show
+    defaults: { _controller: "gestionBundle:Personne_admin:show" }
+    methods:  GET
+
+admin_personne_new:
+    path:     /new
+    defaults: { _controller: "gestionBundle:Personne_admin:new" }
+    methods:  [GET, POST]
+
+admin_personne_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "gestionBundle:Personne_admin:edit" }
+    methods:  [GET, POST]
+
+admin_personne_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "gestionBundle:Personne_admin:delete" }
+    methods:  DELETE

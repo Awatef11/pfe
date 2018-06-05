@@ -1,0 +1,5 @@
+formation_index:
+    path:     /
+    defaults: { _controller: "gestionBundle:Formation:index" }
+    methods:  GET
+

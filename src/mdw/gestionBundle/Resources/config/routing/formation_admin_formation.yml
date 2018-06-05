@@ -1,0 +1,29 @@
+admin_formation_index:
+    path:     /
+    defaults: { _controller: "gestionBundle:Formation:index" }
+    methods:  GET
+
+admin_formation_show:
+    path:     /{id}/show
+    defaults: { _controller: "gestionBundle:Formation:show" }
+    methods:  GET
+
+admin_formation_new:
+    path:     /new
+    defaults: { _controller: "gestionBundle:Formation:new" }
+    methods:  [GET, POST]
+
+admin_formation_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "gestionBundle:Formation:edit" }
+    methods:  [GET, POST]
+
+admin_formation_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "gestionBundle:Formation:delete" }
+    methods:  DELETE
+
+choix:
+    path:     /choix
+    defaults: { _controller: "gestionBundle:Formation:choix" }
+    methods:  [GET, POST]

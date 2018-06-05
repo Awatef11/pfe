@@ -1,0 +1,15 @@
+parameters:
+    class_mail: mdw\gestionBundle\Service\EmailManager
+
+services:
+#    gestion.example:
+#        class: mdw\gestionBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+
+    mail_confirmation:
+        class: '%class_mail%'
+        arguments:
+            - '@mailer'
+            - '@templating.engine.twig'
+            - '@security.token_storage'

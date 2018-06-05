@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Formations list</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Formation</th>
+                <th>Seminaire</th>
+                <th>Datedebut</th>
+                <th>Datefin</th>
+                <th>Annee</th>
+                <th>Nbrpersonne</th>
+                <th>Matricule</th>
+                <th>Categories</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for formation in formations %}
+            <tr>
+                <td><a href="{{ path('admin_formation_show', { 'id': formation.id }) }}">{{ formation.id }}</a></td>
+                <td>{{ formation.formation }}</td>
+                <td>{{ formation.seminaire }}</td>
+                <td>{% if formation.dateDebut %}{{ formation.dateDebut|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if formation.dateFin %}{{ formation.dateFin|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ formation.annee }}</td>
+                <td>{{ formation.nbrPersonne }}</td>
+                <td>{{ formation.matricule }}</td>
+                <td>{{ formation.categories }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_formation_show', { 'id': formation.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_formation_edit', { 'id': formation.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_formation_new') }}">Create a new formation</a>
+        </li>
+    </ul>
+{% endblock %}

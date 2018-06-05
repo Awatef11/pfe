@@ -1,0 +1,60 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+<link rel="stylesheet" href="{{asset('bundles/mdwgestion/css/style_show.css')}}">
+<div>
+    <h1> <center>Supprimer un Utilisateur </center></h1>
+   <table >
+        <tr>
+            <td>Nom</td>
+            <td><input type="text" name="nom" placeholder=""/></td>
+        </tr>
+        <tr>
+            <td>Prenom</td>
+            <td><input type="text" name="prenom" placeholder=""/></td>
+        </tr>
+        <tr>
+            <td>Cin</td>
+            <td><input type="int" name="cin" placeholder=""/></td>
+        </tr>
+
+        <tr>
+            <td>Matricule</td>
+            <td><input type="int" name="matricule" placeholder=""/></td>
+        </tr>
+        <tr>
+
+
+            <td>CNSS</td>
+            <td><input type="int" name="CNSS" placeholder=""/></td>
+        </tr>
+        <tr>
+            <td>Poste </td>
+            <td><input type="text" name="poste" placeholder=""/>
+        </tr>
+        <tr>
+            <td>Département </td>
+            <td><input type="text" name="departement" placeholder=""/>
+        </tr>
+
+        <tr>
+
+        </tr>
+        <tr>
+
+        </tr>
+
+        <tr>
+            <td>
+                <input type="submit" name="ajouter" value="Ajouter"/>
+            </td>
+
+            <td>
+                <a href="acceuil.php" target="_blank" ><input type="reset" value="Annuler" /></a>
+            </td>
+        </tr>
+
+    </table>
+</div>
+</form>
+{% endblock %}

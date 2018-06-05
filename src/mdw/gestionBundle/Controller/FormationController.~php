@@ -1,0 +1,18 @@
+<?php
+
+namespace mdw\gestionBundle\Controller;
+
+use mdw\gestionBundle\Entity\Formation;
+use mdw\gestionBundle\Form\FormationType;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+class FormationController extends Controller
+{
+    public function indexAction()
+    {
+        $formation = new Formation();
+        $form =   $this->createForm(FormationType::class, $formation);
+
+        return $this->render('gestionBundle:Formation:index.html.twig', array('form'=> $form->createView()));
+    }
+}

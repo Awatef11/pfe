@@ -1,0 +1,31 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    <link rel="stylesheet" href="{{asset('bundles/mdwgestion/css/style_show.css')}}">
+<body class="home-page">
+<img src="images/search.png" id="pic"/>
+<div class="recherche">
+    <input type="text" name="search" placeholder="Chercher......." class="search">
+
+</div>
+<h1 class="h1">GESTION DES FORMATION</h1>
+
+<div align="center">
+
+    <ul class="red">
+        <center>
+
+
+            <li><a href="main.html" title="accueil" class="current" target="menu"><span> accueil</span></a></li>
+
+
+            <li><a href="liste_per.html" target="menu" title="liste"><span>Liste De Personne</span></a></li>
+            <li><a href="ajoutform.html" target="menu" title="insertion"><span>Ajout Formation</span></a></li>
+
+
+        </center>
+    </ul>
+</div>
+
+
+{% endblock %}

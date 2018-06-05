@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<form action="{{ path('choix') }}" method="POST" name="choix_formation">
+    {% for formation in formations %}
+       {{ formation.formation }}
+        <input type="checkbox" value="{{ formation.id }}">
+        <br>
+    {% endfor %}
+    <input type="submit">
+</form>
+{% endblock %}
+

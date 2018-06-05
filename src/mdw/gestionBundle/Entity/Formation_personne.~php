@@ -1,0 +1,139 @@
+<?php
+
+namespace mdw\gestionBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Formation_personne
+ *
+ * @ORM\Table(name="formation_personne")
+ * @ORM\Entity(repositoryClass="mdw\gestionBundle\Repository\Formation_personneRepository")
+ */
+class Formation_personne
+{
+
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+
+    public function __construct(){
+
+        $this->setAccepte(false);
+
+    }
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity ="mdw\gestionBundle\Entity\Formation" )
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $formation;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="mdw\gestionBundle\Entity\Personne")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $personne;
+
+
+
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="accepte", type="boolean")
+     */
+    private $accepte;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set accepte
+     *
+     * @param boolean $accepte
+     *
+     * @return Formation_personne
+     */
+    public function setAccepte($accepte)
+    {
+        $this->accepte = $accepte;
+
+        return $this;
+    }
+
+    /**
+     * Get accepte
+     *
+     * @return bool
+     */
+    public function getAccepte()
+    {
+        return $this->accepte;
+    }
+
+    /**
+     * Set formation.
+     *
+     * @param \mdw\gestionBundle\Entity\Formation $formation
+     *
+     * @return Formation_personne
+     */
+    public function setFormation(\mdw\gestionBundle\Entity\Formation $formation)
+    {
+        $this->formation = $formation;
+
+        return $this;
+    }
+
+    /**
+     * Get formation.
+     *
+     * @return \mdw\gestionBundle\Entity\Formation
+     */
+    public function getFormation()
+    {
+        return $this->formation;
+    }
+
+    /**
+     * Set personne.
+     *
+     * @param \mdw\gestionBundle\Entity\Personne $personne
+     *
+     * @return Formation_personne
+     */
+    public function setPersonne(\mdw\gestionBundle\Entity\Personne $personne)
+    {
+        $this->personne = $personne;
+
+        return $this;
+    }
+
+    /**
+     * Get personne.
+     *
+     * @return \mdw\gestionBundle\Entity\Personne
+     */
+    public function getPersonne()
+    {
+        return $this->personne;
+    }
+}

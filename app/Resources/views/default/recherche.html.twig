@@ -1,0 +1,35 @@
+<html>
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<head>
+
+    <title>Rechercher</title>
+    <link href="css/style2.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<form>
+        <table width=50% align=center>
+        <tr>
+            <td align=rigth><input class='text' type="text" name="recherche" size=50 maxlength=50></td>
+            <td align=left><input class="bouton" type="submit" name="Rechercher" value="Rechercher"></td>
+        </tr>
+    </table>
+    <table width=25% align=center>
+        <tr>
+            <td><input type="radio" name="choix" value="cin" checked>Cin</td>
+            <td><input type="radio" name="choix" value="matricule">Matricule</td>
+
+
+            <td><input type="radio" name="choix" value="centre d'interet">centre d'interet</td>
+        </tr>
+    </table>
+</form>
+
+</body>
+
+</html>
+{% endblock %}

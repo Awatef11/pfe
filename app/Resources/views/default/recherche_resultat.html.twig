@@ -1,0 +1,37 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+
+
+    {% if formations|length != 0 %}
+
+        {% for formation in formations %}
+
+            {{ formation.formation }}<br>
+            {{ formation.annee }} <br>
+            {{ formation.matricule }}
+
+        {% endfor %}
+    {% else %}
+        <h4> le resultat de la recherche formation est vide !!!! </h4>
+    {% endif %}
+
+
+
+    {% if personnes|length != 0 %}
+
+        {% for personne in personnes %}
+
+            {{ personne.nom }}<br>
+            {{ personne.matricule }}<br>
+            {{ personne.prenom }}<br>
+
+        {% endfor %}
+    {% else %}
+        <h4> le resultat de la recherche personne est vide !!!! </h4>
+    {% endif %}
+
+
+
+{% endblock %}

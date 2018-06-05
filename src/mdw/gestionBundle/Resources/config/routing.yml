@@ -1,0 +1,24 @@
+gestion_admin_personne:
+    resource: "@gestionBundle/Resources/config/routing/personne_admin_routing.yml"
+    prefix:   /admin/personne
+
+gestion_homepage:
+    path:     /
+    defaults: { _controller: gestionBundle:Default:index }
+
+gestion_homepage_admin:
+    path:     /home/ad
+    defaults: { _controller: gestionBundle:Default:accueil_admin }
+
+gestion_formation:
+    resource: "@gestionBundle/Resources/config/routing/formation_routing.yml"
+    prefix:   /formation
+
+gestion_admin_formation:
+    resource: "@gestionBundle/Resources/config/routing/formation_admin_formation.yml"
+    prefix:   /admin/formation
+
+
+gestion_recherche:
+    path: /recherche
+    defaults: {_controller: gestionBundle:Default:recherche}
